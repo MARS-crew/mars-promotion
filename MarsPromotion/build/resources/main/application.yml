@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://211.253.11.94:3306/mars_sequel
+    username: mars_user
+    password: mars2022!@#
+#        hikari:
+#            auto-commit: false
+#            connection-test-query: SELECT 1
+#            minimum-idle: 10
+#            maximum-pool-size: 50
+#            transaction-isolation: TRANSACTION_READ_UNCOMMITTED
+#            pool-name: pool-jiniworld
+  jpa:
+    hibernate:
+      ddl-auto: none # 어플리케이션을 시작할 때 데이터베이스를 초기화하고 다시 테이블 생성
+    properties:
+      hibernate:
+        format_sql: true # 실행되는 query를 보여줌
+
+#    jpa:
+#        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#            properties:
+#                hibernate:
+#                    format_sql: true
+#                    implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+#                    physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#                    hbm2ddl.auto: update
+#        open-in-view: false
+#        show-sql: true

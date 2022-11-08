@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마스외전</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="favicon" href="/images/logo.ico" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-arrow-prev" onclick="history.back();"></div>
+            <div class="header-title">신청화면</div>
+        </header>
+        <!-- CONTAINER-->
+        <div class="container">
+            <section>
+                <div class="applay-content">
+
+                    <div class="applay-info-area">
+                        <label for="userName">이름<span class="required-icon">*</span></label>
+                        <div class="input-text"><input type="text" id="userName" name="userName"
+                                placeholder="이름을 입력해주세요" /></div>
+                    </div>
+
+                    <div class="applay-info-area">
+                        <label for="userPhoneNum">휴대폰번호<span class="required-icon">*</span></label>
+                        <div class="input-text">
+                            <input type="text" id="userPhoneNum" name="userPhoneNum" placeholder="'-'를 제외하고 입력해 주세요"
+                                onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" />
+                        </div>
+                    </div>
+
+                    <div class="applay-info-area">
+                        <label for="applyGraduate">지원기수<span class="required-icon">*</span></label>
+                        <div class="apply-jockey-area">
+                            <div>
+                                <input type="radio" id="applyGraduate" name="applyInfoType" value="4기" />
+                                <label for="applyGraduate">
+                                    <span class="radio"></span>
+                                    <span>4기지원(졸업생)</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="applystudents" name="applyInfoType" value="깍두기" />
+                                <label for="applystudents">
+                                    <span class="radio"></span>
+                                    <span>깍두기(재학생)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="applay-info-area">
+                        <label for="applyPlan">지원분야<span class="required-icon">*</span></label>
+                        <div class="explanation-text">(복수선택가능)</div>
+                        <div class="apply-field-area">
+                            <div>
+                                <input type="checkbox" id="applyPlan" name="applyType" value="기획" />
+                                <label for="applyPlan">
+                                    <span class="checkbox"></span>
+                                    <span>기획</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="applyDesign" name="applyType" value="디자인" />
+                                <label for="applyDesign">
+                                    <span class="checkbox"></span>
+                                    <span>디자인</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="applyPublishing" name="applyType" value="퍼블리싱" />
+                                <label for="applyPublishing">
+                                    <span class="checkbox"></span>
+                                    <span>퍼블리싱</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="applyFrontDev" name="applyType" value="프론트엔드" />
+                                <label for="applyFrontDev">
+                                    <span class="checkbox"></span>
+                                    <span>프론트엔드</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="applyBackDev" name="applyType" value="백엔드" />
+                                <label for="applyBackDev">
+                                    <span class="checkbox"></span>
+                                    <span>백엔드</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="applay-info-area">
+                        <label for="">지원동기<span class="required-icon">*</span></label>
+                        <div class="input-textarea">
+                            <textarea name="Motive" id="" maxlength="1000"
+                                placeholder="지원동기를 입력해주세요(최대 1000자)"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="applay-info-area">
+                        <label for="">마지막으로 하고 싶은말</label>
+                        <div class="input-textarea">
+                            <textarea name="lastSay" id="" maxlength="1000"
+                                placeholder="지원동기를 입력해주세요(최대 1000자)"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button class="apply-btn btn medium type01 round">신청완료</button>
+                    </div>
+                </div>
+        </div>
+        <!-- //CONTAINER-->
+        <div class="popup-wrap hidden">
+            <div class="popup-container">
+                <div class="popup-btn-area">
+                    <button class="popup-close-btn"></button>
+                </div>
+
+                <div class="popup-text">마스외전에 올 준비가 완료되었습니다!</div>
+                <div class="btn-area">
+                    <button class="btn small type01 round popup-btn">확인</button>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    </div>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
