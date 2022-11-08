@@ -45,6 +45,7 @@ const popupOpen = () => {
 };
 popupBtn.addEventListener("click", () => {
   classAdd(popupEl, "hidden");
+  location.href = "/index.html";
 });
 popupCloseBtn.addEventListener("click", () => {
   classAdd(popupEl, "hidden");
