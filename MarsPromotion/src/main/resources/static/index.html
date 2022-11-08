@@ -10,8 +10,9 @@
     <link rel="favicon" href="/images/logo.ico" />
     <link rel="stylesheet" href="/css/main.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <!-- Swiper -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -59,7 +60,7 @@
         <div class="btn-area">
           <button
             class="apply-btn btn small-medium type01 round"
-            onClick="location.href = 'https://peach-wrinkle-30e.notion.site/e10531f60f224fcfabf67f1e7c6f7cd3';"
+            onClick="javascript:void(window.open('https://peach-wrinkle-30e.notion.site/e10531f60f224fcfabf67f1e7c6f7cd3', '마스외전 프로젝트 소개','width=#, height=#'))""
           >
             프로젝트 보기
           </button>
@@ -125,8 +126,8 @@
                   <span>3기</span>
                 </div>
                 <div class="main-reviewer-text">
-                  졸업반 막학기임에도 불구하고 실제 프로젝트 경험이 없어 개발 실력을 어떻게 키워야하나 고민하던 때, 마스외전을 통해 실제 프로젝트를 경험하면서 스스로 얼마나 부족한 상태인지 깨달을 수 있었습니다.
-                  마스외전은 다양한 개발 스펙을 경험하기에 적합한 동아리이기 때문에 취업 후 회사에서 사용하는 개발 스펙의 종류가 적고 오래된 스펙일지라도 스스로의 성장에 많은 도움이 되는 동아리입니다.
+                  졸업학기임에도 불구하고 실제 프로젝트 경험이 없어 실력을 어떻게 키워야하나 고민하던 때, 마스외전을 통해 실제 프로젝트를 경험하면서 스스로 
+                  얼마나 부족한 상태인지 깨달을 수 있었습니다. 마스외전은 다양한 개발 스펙을 경험하기 적합한 동아리이기 때문에 취업 후 회사에서 사용하는 개발 스펙의 종류가 제한되었을지라도 성장하는것에 도움이 되는 동아리입니다.  
                 </div>
               </div>
             </div>
@@ -227,12 +228,13 @@
           <img src="images/all_rights_Reserved.png" class="" />
         </div>
         <div class="footer-right">
-          <a class="main-link" href="https://www.instagram.com/mars_sequel/">
+          <a class="main-link" href="javascript:void(window.open('https://www.instagram.com/mars_sequel/', '마스외전 오픈채팅방','width=#, height=#'))
+          ">
             <img src="images/INSTA.png" class="" />
           </a>
           <a
             class="main-link"
-            href="https://youtube.com/playlist?list=PLLKJsE50tk8Gcq5HgdB3ZAdL7waUa5ttg"
+            href="javascript:void(window.open('https://youtube.com/playlist?list=PLLKJsE50tk8Gcq5HgdB3ZAdL7waUa5ttg', '마스외전 인터뷰 영상','width=#, height=#'))"
           >
             <img src="images/youtube.png" class="" />
           </a>
@@ -251,7 +253,7 @@
           <div class="btn-area">
             <button
               class="btn small type01 round popup-btn"
-              onClick="location.href='https://open.kakao.com/o/skmp5qLe';"
+              onClick="javascript:void(window.open('https://open.kakao.com/o/skmp5qLe', '마스외전 오픈채팅방','width=#, height=#'))"
             >
               확인
             </button>
@@ -265,6 +267,28 @@
 
     <!-- Initialize Swiper -->
     <script>
+
+      let floatIcon = document.querySelector('.floating-icon');
+
+
+    /*플로팅*/
+
+  $(function() {
+
+      var $w = $(window),
+        footerHei = $('footer').outerHeight(),
+        $banner = $('.floating-icon');
+
+        $w.on('scroll', function() {
+        var sT = $w.scrollTop();
+        var val = $(document).height() - $w.height() - footerHei;
+        if (sT >= val)
+            $banner.addClass('done')
+        else
+          $banner.removeClass('done')
+      });
+});
+
       function copy_to_clipboard(event) {
         const input_text = document.getElementById('copyText')
         input_text.select()

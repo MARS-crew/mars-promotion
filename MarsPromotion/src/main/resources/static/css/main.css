@@ -1,4 +1,22 @@
 /* common */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0 auto;
+}
+.main-wrapper .main-1,
+.main-wrapper .main-2 {
+  width: 100%;
+}
+
+
+/* popup */
 .popup-wrap {
   z-index: 9999;
 }
@@ -8,17 +26,8 @@
   font-size: 1rem;
   font-weight: bold;
 }
-.body {
-  margin: 0 auto;
-}
 
-.main-wrapper .main-1,
-.main-wrapper .main-2 {
-  width: 100%;
-}
-.kakao-map .customoverlay span {
-}
-
+/* kakao map */
 .kakao-map .customoverlay {
   position: relative;
   bottom: 58px;
@@ -63,40 +72,34 @@
   height: 12px;
   background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
 }
-
-/*    */
-
-.profile-section .group-member {
-  background: none !important;
+.kakao-map {
+  /* height: 200px; */
+}
+.map-text input {
+  border: none;
+  background: none;
+  outline: none;
+  text-align: center;
+  padding: 21px 0;
+  width: 100%;
+  font-weight: 500;
 }
 
+
+/* swiper */
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 45px;
 }
-
 .swiper-button-next,
 .swiper-button-prev {
-  /* width: 30px; */
   width: 12px !important;
   height: 36px !important;
 }
-.swiper {
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 20px !important;
 }
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-}
-
 .swiper-button-next {
   background: url(/images/right-arrow.png);
   background-repeat: no-repeat !important;
@@ -113,11 +116,7 @@ body {
 .swiper-rtl .swiper-button-next {
   left: 20px !important;
   right: auto;
-
-  /* height: 42px!important;
-        width: 30px !important; */
 }
-
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after,
 .swiper-button-next:after,
@@ -131,7 +130,6 @@ body {
   text-align: center;
   font-size: 18px;
 
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -145,53 +143,20 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
-
   object-fit: cover;
 }
 
-/* proj section */
-.main-section {
-  padding: 30px 0 47px;
-}
-.main-section-content {
-  width: 85%;
 
-  margin: 0 auto;
-}
-.kakao-map {
-  height: 200px;
-}
-
-.main-section.map-section {
-  padding: 0 0 3px;
-}
-
-.map-text {
-}
-
-.map-text input {
-  border: none;
-  background: none;
-  outline: none;
-  text-align: center;
-  padding: 21px 0;
-  width: 100%;
-  font-weight: 500;
-}
-
-/*--- 리뷰 ---*/
-
+/* review */
 .main-reviewer-name span:nth-child(2) {
   font-size: 1.9rem;
 }
 .main-reviewer-name span {
   padding: 0 7px;
 }
-
 .main-reviewer-image.member-1 {
   background: url('/images/reviewer1.png') no-repeat;
   background-position: center;
@@ -230,24 +195,17 @@ body {
 
 .main-reviewer-image {
   margin-top: 25px !important;
-
-  /* background-size: 250%; */
   width: 90px;
   height: 90px;
-  /* background-position: center; */
-
   margin: 0 auto;
   border-radius: 50px;
 }
-
 .main-section-review-content {
   height: 100%;
 }
-
 .main-reviewer-name {
   font-size: 1.5rem;
   font-weight: 400;
-
   padding: 9px 0 15px;
 }
 .main-reviewer-text {
@@ -256,29 +214,29 @@ body {
   margin: 0 79px;
   line-height: 25px;
 }
-
 .review-section {
-  padding: 30px 0 17px;
-
+  padding: 30px 0 10px;
   font-weight: 900;
   background: #f8f8f8;
   position: relative;
 }
-
 .review-section .main-section-content {
   height: 100%;
   width: 100%;
 }
+.main-review-title {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
 
-/**/
+/* footer */
 .footer-left {
   float: left;
   padding: 10px 0 10px 30px;
-
   height: 100%;
   display: inline-block;
 }
-
 .footer-right {
   height: 100%;
   float: right;
@@ -295,14 +253,12 @@ body {
   background-repeat: no-repeat;
   height: 50px;
   width: 50px;
-
   background: url('../images/youtube.png');
 }
 .footer-right .sns-logo-2 {
   background: url('../images/INSTA.png');
   height: 50px;
 }
-
 footer hr {
   border-style: solid;
   border-width: 1.2px 0 0 0;
@@ -311,6 +267,25 @@ footer {
   margin-top: 65px;
   padding-bottom: 30px;
 }
+
+
+/* section */
+.main-section {
+  padding: 30px 0 47px;
+}
+.main-section-content {
+  width: 85%;
+  /**/
+  height: 200px;
+  margin: 0 auto;
+}
+.profile-section .group-member {
+  background: none !important;
+}
+.main-section.map-section {
+  padding: 0 0 3px;
+}
+
 
 /**/
 .floating-icon {
@@ -321,22 +296,18 @@ footer {
   position: fixed;
   z-index: 99;
   right: 4%;
-  bottom: 95px;
+  bottom: 25px;
   background-position: center;
   border-radius: 8px;
   background-size: 100%;
 }
-
+.floating-icon.done {
+  bottom: 95px;
+}
 .main-link {
   height: 100%;
 }
 
-.main-review-title {
-  margin-top: 10px;
-
-  width: 100%;
-  height: auto;
-}
 
 /* Mobile Device */
 @media screen and (max-width: 360px) {
@@ -351,10 +322,6 @@ footer {
 @media screen and (max-width: 320px) {
   .main-section {
     padding: 10px 0 10px;
-  }
-  .floating-icon {
-    width: 50px;
-    height: 50px;
   }
   .main-reviewer-text {
     margin: 0 49px;
@@ -371,11 +338,17 @@ footer {
   .map-text {
     font-size: 1rem;
   }
-  .floating-icon {
-    bottom: 80px;
-  }
   .footer-left img:nth-child(2) {
     width: 130px;
+  }
+  .floating-icon {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    transition: all 0.3s;
+  }
+  .floating-icon.done {
+    bottom: 75px;
   }
 }
 
